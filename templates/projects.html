@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Section Hero -->
+<section class="hero text-center py-5 bg-galaxy">
+  <div class="container">
+    <h1 class="display-4 fw-bold neon-text">Mes Projets</h1>
+    <p class="lead mt-3 neon-text">Découvrez mes réalisations et explorez mon univers créatif.</p>
+  </div>
+</section>
+
+<!-- Section Projets -->
+<section class="projects py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center mb-5 neon-text">Mes Réalisations</h2>
+    <div class="row">
+      <!-- Projet 1 : Site E-commerce -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Site E-commerce">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Site E-commerce</h3>
+            <p class="card-text neon-text">
+              Un site e-commerce complet avec gestion de panier, paiement en ligne, et tableau de bord administrateur.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Application de Gestion de Tâches -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Application de Gestion de Tâches">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Application de Gestion de Tâches</h3>
+            <p class="card-text neon-text">
+              Une application web pour gérer les tâches quotidiennes avec des rappels et des notifications.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 : Portfolio Galactique -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Portfolio Galactique">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Portfolio Galactique</h3>
+            <p class="card-text neon-text">
+              Mon propre portfolio conçu pour montrer mes compétences et mes projets de manière créative.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 : Plateforme de Cours en Ligne -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Plateforme de Cours en Ligne">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Plateforme de Cours en Ligne</h3>
+            <p class="card-text neon-text">
+              Une plateforme éducative pour suivre des cours en ligne avec des fonctionnalités interactives.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 : Réseau Social -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Réseau Social">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Réseau Social</h3>
+            <p class="card-text neon-text">
+              Un réseau social avec des fonctionnalités de publication, de commentaires et de messagerie.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 6 : Jeu Vidéo en Réalité Virtuelle -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Jeu Vidéo en Réalité Virtuelle">
+          <div class="card-body">
+            <h3 class="card-title neon-text">Jeu Vidéo en Réalité Virtuelle</h3>
+            <p class="card-text neon-text">
+              Un jeu vidéo immersif en réalité virtuelle pour explorer des mondes fantastiques.
+            </p>
+            <a href="#" class="btn btn-neon">Voir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Call to Action -->
+<section class="cta py-5 bg-galaxy">
+  <div class="container text-center">
+    <h2 class="neon-text">Vous avez un projet en tête ?</h2>
+    <p class="lead neon-text mt-3">Contactez-moi pour discuter de votre idée et la concrétiser ensemble.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-neon btn-lg mt-3">
+      <i class="fas fa-envelope me-2"></i>Contactez-moi
+    </a>
+  </div>
+</section>
+{% endblock %}

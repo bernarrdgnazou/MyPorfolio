@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Section Hero -->
+<section class="hero text-center py-5 bg-galaxy">
+  <div class="container">
+    <h1 class="display-4 fw-bold neon-text">Mes Services</h1>
+    <p class="lead mt-3 neon-text">Découvrez les services que je propose pour répondre à vos besoins numériques.</p>
+  </div>
+</section>
+
+<!-- Section Services -->
+<section class="services py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center mb-5 neon-text">Ce que je propose</h2>
+    <div class="row">
+      <!-- Service 1 : Développement Web -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-code icon-neon"></i>
+            <h3 class="card-title neon-text">Développement Web</h3>
+            <p class="card-text neon-text">
+              Création de sites web et applications modernes, responsives et performantes. Utilisation des dernières technologies comme React, Flask, et Tailwind CSS.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 : Design UI/UX -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-paint-brush icon-neon"></i>
+            <h3 class="card-title neon-text">Design UI/UX</h3>
+            <p class="card-text neon-text">
+              Conception d'interfaces utilisateur intuitives et esthétiques. Prototypage avec Figma et Adobe XD pour des expériences utilisateur exceptionnelles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 : Développement Back-end -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-server icon-neon"></i>
+            <h3 class="card-title neon-text">Développement Back-end</h3>
+            <p class="card-text neon-text">
+              Développement d'API robustes et sécurisées. Gestion de bases de données et intégration de systèmes complexes avec Node.js, Python, et MongoDB.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 : Optimisation SEO -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-chart-line icon-neon"></i>
+            <h3 class="card-title neon-text">Optimisation SEO</h3>
+            <p class="card-text neon-text">
+              Amélioration du référencement naturel de votre site web pour augmenter sa visibilité sur les moteurs de recherche.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 5 : Maintenance et Support -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-tools icon-neon"></i>
+            <h3 class="card-title neon-text">Maintenance et Support</h3>
+            <p class="card-text neon-text">
+              Maintenance continue et support technique pour garantir le bon fonctionnement de vos applications et sites web.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 : Consultation Technologique -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-neon">
+          <div class="card-body text-center">
+            <i class="fas fa-lightbulb icon-neon"></i>
+            <h3 class="card-title neon-text">Consultation Technologique</h3>
+            <p class="card-text neon-text">
+              Conseil et accompagnement pour choisir les meilleures solutions technologiques adaptées à vos besoins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Call to Action -->
+<section class="cta py-5 bg-galaxy">
+  <div class="container text-center">
+    <h2 class="neon-text">Prêt à transformer vos idées en réalité ?</h2>
+    <p class="lead neon-text mt-3">Contactez-moi dès aujourd'hui pour discuter de votre projet.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-neon btn-lg mt-3">
+      <i class="fas fa-envelope me-2"></i>Contactez-moi
+    </a>
+  </div>
+</section>
+{% endblock %}

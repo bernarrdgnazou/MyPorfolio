@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bernard Gnazou</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+<!-- Section Hero -->
+<section class="hero text-center py-5 bg-galaxy">
+  <div class="container">
+    <h1 class="display-4 fw-bold neon-text">Développeur Full Stack & Designer UI/UX</h1>
+    <p class="lead mt-3 neon-text">Passionné par la création d'expériences numériques innovantes et performantes.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-neon btn-lg mt-3">
+      <i class="fas fa-envelope me-2"></i>Contactez-moi
+    </a>
+  </div>
+</section>
+
+<!-- Section À propos -->
+<section class="about py-5 bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="mb-4 neon-text">À propos de moi</h2>
+        <p class="lead neon-text">
+          Je suis un développeur full stack et designer UI/UX avec plus de 5 ans d'expérience dans la création de sites web et d'applications modernes. Mon expertise couvre le développement front-end et back-end, ainsi que la conception d'interfaces utilisateur intuitives et esthétiques.
+        </p>
+        <p class="neon-text">
+          J'ai travaillé sur une variété de projets, allant de sites vitrines à des applications web complexes. Mon objectif est de combiner créativité et technologie pour offrir des solutions qui répondent aux besoins de mes clients tout en offrant une expérience utilisateur exceptionnelle.
+        </p>
+        <p class="neon-text">
+          En dehors du développement, je suis passionné par l'apprentissage continu et les nouvelles technologies. J'aime explorer des outils et des frameworks modernes pour rester à la pointe de l'industrie.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Compétences -->
+<section class="skills py-5 bg-galaxy">
+  <div class="container">
+    <h2 class="text-center mb-5 neon-text">Mes Compétences</h2>
+    <div class="row">
+      <!-- Compétence 1 -->
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-code icon-neon"></i>
+        <h3 class="neon-text">Développement Web</h3>
+        <p class="neon-text">Création de sites web et applications modernes avec HTML, CSS, JavaScript, et frameworks comme React et Flask.</p>
+      </div>
+      <!-- Compétence 2 -->
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-paint-brush icon-neon"></i>
+        <h3 class="neon-text">Design UI/UX</h3>
+        <p class="neon-text">Conception d'interfaces utilisateur intuitives et esthétiques avec Figma, Adobe XD, et Tailwind CSS.</p>
+      </div>
+      <!-- Compétence 3 -->
+      <div class="col-md-4 text-center mb-4">
+        <i class="fas fa-server icon-neon"></i>
+        <h3 class="neon-text">Back-end & Bases de Données</h3>
+        <p class="neon-text">Développement d'API robustes et gestion de bases de données avec Node.js, Python, et MongoDB.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
