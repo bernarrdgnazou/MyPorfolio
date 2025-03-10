@@ -62,7 +62,6 @@ module.exports = {
     require('daisyui'), // Intègre DaisyUI
     require('@tailwindcss/typography'), // Ajoute des styles typographiques
     require('@tailwindcss/forms'), // Ajoute des styles pour les formulaires
-    require('tailwindcss-text-shadow'), // Ajoute des ombres de texte
     require('tailwindcss-animate'), // Ajoute des animations personnalisées
       require('tailwindcss-text-fill-stroke'),
   ],

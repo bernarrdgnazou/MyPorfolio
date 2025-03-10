@@ -1,6 +1,171 @@
 {% extends "base.html" %}
 
+{% block style %}
+    <link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+
+<style>
+  /* Styles spécifiques à la page "Contact" */
+
+  /* Nouvelles couleurs personnalisées */
+  :root {
+    --neon-violet: #1aff00; /* Violet néon */
+    --neon-cyan: #00FFFF; /* Cyan néon */
+    --glass-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  }
+
+  /* Section Hero */
+  .hero.bg-galaxy {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(46, 46, 46, 0.1), rgba(0, 0, 0, 0.1)); /* Fond semi-transparent */
+    background-size: 200% 200%;
+    animation: waveBackground 10s ease-in-out infinite;
+    border-bottom: 2px solid var(--neon-violet);
+    box-shadow: 0 0 20px var(--neon-violet), 0 0 40px var(--neon-violet);
+    backdrop-filter: blur(10px); /* Effet de verre transparent */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    isolation: isolate; /* Assure que l'effet fonctionne correctement */
+  }
+
+  .hero .neon-text {
+    background: linear-gradient(45deg, var(--neon-violet), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+
+  /* Section Formulaire de Contact */
+  .contact.bg-dark {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+    padding: 4rem 0;
+    backdrop-filter: blur(10px); /* Effet de verre transparent */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(26, 255, 0, 0.1), 0 0 40px rgba(26, 255, 0, 0.05);
+  }
+
+  .neon-form {
+    background-color: rgba(46, 46, 46, 0.5); /* Fond semi-transparent */
+    border: 2px solid var(--neon-violet);
+    border-radius: 1px;
+    padding: 2rem;
+    box-shadow: 0 0 2px var(--neon-violet), 0 0 3px var(--neon-violet);
+    backdrop-filter: blur(10px); /* Effet de verre transparent */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+  }
+
+  .neon-form .form-label {
+    font-family: 'Audiowide', sans-serif;
+    color: var(--neon-violet);
+    font-size: 1.2rem;
+  }
+
+  .neon-form .neon-input {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border: 1px solid var(--neon-violet);
+    color: var(--text-color); /* Texte en blanc */
+    font-family: 'Share Tech Mono', monospace;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .neon-form .neon-input:focus {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  }
+
+  .neon-form .btn-neon {
+    font-family: 'VT323', monospace;
+    background-color: transparent;
+    border: 2px solid var(--neon-violet);
+    color: var(--neon-violet);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .neon-form .btn-neon:hover {
+    background-color: var(--neon-violet);
+    color: var(--black);
+    box-shadow: 0 0 5px var(--neon-violet), 0 0 10px var(--neon-violet);
+  }
+
+  /* Section Informations de Contact */
+  .info.bg-galaxy {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(46, 46, 46, 0.1), rgba(0, 0, 0, 0.1)); /* Fond semi-transparent */
+    background-size: 200% 200%;
+    animation: waveBackground 10s ease-in-out infinite;
+    border-top: 2px solid var(--neon-violet);
+    box-shadow: 0 0 30px var(--neon-violet), 0 0 50px var(--neon-violet);
+    backdrop-filter: blur(10px); /* Effet de verre transparent */
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+  }
+
+  .info .icon-neon {
+    font-size: 3rem;
+    color: var(--neon-violet);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .info .icon-neon:hover {
+    color: var(--neon-cyan);
+    transform: scale(1.2);
+  }
+
+  .info .neon-text {
+    font-family: 'Audiowide', sans-serif;
+    color: var(--neon-violet);
+    font-size: 1.2rem;
+  }
+
+  .info p {
+    color: var(--text-color); /* Texte en blanc */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+  }
+
+  /* Animations */
+  @keyframes waveBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  #particleeco-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Place les particules en arrière-plan */
+}
+</style>
+{% endblock %}
+
 {% block content %}
+    <div id="particleeco-js"></div>
+
 <!-- Section Hero -->
 <section class="hero text-center py-5 bg-galaxy">
   <div class="container">
@@ -41,24 +206,31 @@
 <!-- Section Informations de Contact -->
 <section class="info py-5 bg-galaxy">
   <div class="container text-center">
-    <h2 class="neon-text">Autres moyens de contact</h2>
+    <h2 class="">Autres moyens de contact</h2>
     <div class="row mt-4">
       <div class="col-md-4 mb-4">
         <i class="fas fa-envelope icon-neon"></i>
-        <h3 class="neon-text mt-3">Email</h3>
-        <p class="neon-text">contact@monportfolio.com</p>
+        <h3 class="mt-3">Email</h3>
+        <p class="text-white">contact@monportfolio.com</p> <!-- Texte en blanc -->
       </div>
       <div class="col-md-4 mb-4">
         <i class="fas fa-phone icon-neon"></i>
-        <h3 class="neon-text mt-3">Téléphone</h3>
-        <p class="neon-text">+33 6 12 34 56 78</p>
+        <h3 class="mt-3">Téléphone</h3>
+        <p class="text-white">+33 6 12 34 56 78</p> <!-- Texte en blanc -->
       </div>
       <div class="col-md-4 mb-4">
         <i class="fas fa-map-marker-alt icon-neon"></i>
-        <h3 class="neon-text mt-3">Adresse</h3>
-        <p class="neon-text">123 Rue Galactique, 75000 Paris</p>
+        <h3 class="mt-3">Adresse</h3>
+        <p class="text-white">123 Rue Galactique, 75000 Paris</p> <!-- Texte en blanc -->
       </div>
     </div>
   </div>
 </section>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+  particlesJS.load('particleeco-js', '{{ url_for("static", filename="js/particleeco.json") }}', function() {
+    console.log('particleeco.js loaded!');
+  });
+</script>
+
 {% endblock %}

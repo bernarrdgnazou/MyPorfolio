@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": ["#00e5ff", "#ff00ff", "#9400d3"]
+      "value": ["#FFA500", "#FFFFFF", "#39FF14"]
     },
     "shape": {
       "type": "star",
@@ -43,7 +43,7 @@
     "line_linked": {
       "enable": true,
       "distance": 180,
-      "color": "#00e5ff",
+      "color": "#FFA500",
       "opacity": 0.4,
       "width": 1
     },
@@ -81,7 +81,8 @@
         "size": 8,
         "duration": 2,
         "opacity": 0.8,
-        "speed": 5
+        "speed": 5,
+        "color": "#FFA500"
       },
       "push": {
         "particles_nb": 15

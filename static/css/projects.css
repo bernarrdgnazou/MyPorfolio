@@ -5,22 +5,22 @@
 /* Couleurs */
 
 :root {
-  --neon-blue: #00FFFF;
-  /* Bleu néon */
   --neon-pink: #FF007F;
-  /* Rose fuchsia */
+  /* Rose néon */
   --neon-purple: #9B00FF;
-  /* Violet */
+  /* Violet néon */
   --neon-turquoise: #40E0D0;
   /* Turquoise */
   --neon-yellow: #FFFF00;
   /* Jaune néon */
   --neon-red: #f8ff34;
   /* Rouge néon */
-  --neon-orange: #FFA500;
-  /* Orange néon */
   --neon-green: #39FF14;
   /* Vert néon */
+  --neon-orange: #FFA500;
+  /* Orange néon */
+  --neon-blue: #00FFFF;
+  /* Bleu néon */
   --black: #000000;
   /* Noir profond */
   --metallic-grey: #2E2E2E;
@@ -55,8 +55,8 @@ body {
 header {
   background-color: var(--black);
   padding: 1rem 0;
-  border-bottom: 2px solid var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  border-bottom: 2px solid var(--neon-pink);
+  box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
   position: relative;
   z-index: 10;
   /* Assure que le header est au-dessus des particules */
@@ -65,7 +65,7 @@ header {
 header .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--neon-blue);
+  color: var(--neon-pink);
 }
 
 header .navbar-nav {
@@ -81,17 +81,17 @@ header .nav-link {
 }
 
 header .nav-link:hover {
-  color: var(--neon-blue);
+  color: var(--neon-pink);
 }
 
 /* Menu Burger (Responsive) */
 
 .navbar-toggler {
-  border: 2px solid var(--neon-blue);
+  border: 2px solid var(--neon-pink);
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 0, 127, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Main */
@@ -117,8 +117,8 @@ footer {
   /* Police monospace pour le footer */
   background-color: var(--black);
   padding: 1.5rem 0;
-  border-top: 2px solid var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  border-top: 2px solid var(--neon-purple);
+  box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
   text-align: center;
   margin-top: auto;
   position: relative;
@@ -133,13 +133,13 @@ footer p {
 }
 
 footer a {
-  color: var(--neon-blue);
+  color: var(--neon-pink);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--neon-pink);
+  color: var(--neon-purple);
 }
 
 /* Titres */
@@ -185,8 +185,8 @@ p {
   font-family: 'VT323', monospace;
   /* Police pixelisée pour les boutons */
   background-color: transparent;
-  border: 2px solid var(--neon-blue);
-  color: var(--neon-blue);
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-pink);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   text-transform: uppercase;
@@ -194,9 +194,9 @@ p {
 }
 
 .btn-neon:hover {
-  background-color: var(--neon-blue);
+  background-color: var(--neon-pink);
   color: var(--black);
-  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
 }
 
 /* Cartes */
@@ -205,13 +205,13 @@ p {
   font-family: 'Courier Prime', monospace;
   /* Police Matrix pour les cartes */
   background-color: var(--metallic-grey);
-  border: 1px solid var(--neon-blue);
+  border: 1px solid var(--neon-pink);
   transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-purple);
 }
 
 /* Particules soufflantes */
@@ -230,11 +230,11 @@ p {
 
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-purple);
   }
 
   50% {
-    box-shadow: 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-purple);
   }
 }
 
@@ -258,7 +258,7 @@ p {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, var(--neon-blue), transparent);
+  background: radial-gradient(circle, var(--neon-pink), var(--neon-purple), transparent);
   animation: rotateLight 10s linear infinite;
   z-index: -1;
 }
@@ -266,7 +266,7 @@ p {
 /* Effet de texte dégradé */
 
 .gradient-text {
-  background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink), var(--neon-purple));
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 5s ease-in-out infinite;
@@ -321,7 +321,7 @@ section {
   margin: 20px 0;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.3), 0 0 40px rgba(155, 0, 255, 0.2);
 }
 
 /* Effet de reflet */
@@ -357,8 +357,8 @@ section:nth-child(even) {
 /* Couleurs alternées pour les sections */
 
 section.hero {
-  background-color: rgba(0, 255, 255, 0.1);
-  /* Bleu néon transparent */
+  background-color: rgba(255, 0, 127, 0.1);
+  /* Rose néon transparent */
 }
 
 section.about {
